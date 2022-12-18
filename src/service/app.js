@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 const cors = require('cors');
 var logger = require('morgan');
 
-const usersRouter = require('./routes/users');
+
 const loginRouter = require('./routes/login')
 const bandRouter = require('./routes/band')
 const albumRouter = require('./routes/album')
@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors());
 
-app.use('/api', usersRouter);
+
 app.use('/api',loginRouter)
 app.use('/api',bandRouter)
 app.use('/api',albumRouter)
